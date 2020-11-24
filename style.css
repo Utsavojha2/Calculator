@@ -1,0 +1,121 @@
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84); 
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.calculator{
+  background: white;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px -5px rgba(0,0,0,0.6);
+  
+}
+.calculator-display{
+  background-color: black;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 10px 10px 0 0;
+}
+
+.calculator-display h1{
+  margin: 0;
+  overflow-x: auto;
+  padding: 25px;
+  font-size: 45px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: lighter;
+}
+
+/* Scroll bars */
+::-webkit-scrollbar {
+  width: 10px;
+  }
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  /* border-radius: 10px; */
+  background-color: white;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(85, 85, 85); 
+}
+
+/* calculator buttons */
+.calculator-buttons{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 14px 10px;
+  row-gap: 10px;
+  column-gap: 10px;
+  
+}
+
+.calculator-buttons button{
+  padding: 10px 23px;
+  border-radius: 4px;
+  border: none;
+  font-size: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  background-color: rgb(199, 199, 199);
+  cursor: pointer;
+}
+
+#operator{
+  background-color: rgb(95, 95, 95);
+  border: none;
+  color:white;
+  font-weight: bold;
+}
+
+
+#equal-sign{
+  grid-row: 2 / span 4;
+  grid-column: 4;
+  background-color: green;
+  border: none;
+  color: white;
+}
+
+#clear-btn{
+  background-color: rgb(243, 2, 2);
+  color: white;
+}
+
+.calculator-buttons button:hover{
+  filter: brightness(110%);
+}
+#clear-btn:hover{
+  background-color: rgb(233, 82, 82);
+}
+button:active{
+  transform: translateY(1px);
+
+}
+button:focus{
+  outline: none;
+}
+
+/* Media queries */
+@media screen and (max-width: 600px){
+  .calculator{
+    margin-top: -90px;
+    width: 95%;
+  }
+}
+
